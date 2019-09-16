@@ -129,7 +129,7 @@ class Notepad:
 
         x = Main.main(y)
 
-        content2 = str(x).strip('[]').replace(",","\n")
+        content2 = str(x).strip('[]').replace(",","\n").strip("[]")
 
         with open("result.txt",'w+') as file1:
             content = file1.writelines(content2)
@@ -138,7 +138,7 @@ class Notepad:
 
         file = open("result.txt", "r+")
         root = Tk();
-        root.geometry('500x500')
+        root.geometry('500x600')
         
         text = Text(root)
 

@@ -1,7 +1,11 @@
+int x = 5
+double y = 10.40
 
-if ( x = 5.10 ) {
-    print ( x )     
+if ( x < y ) {
+    print ( x )
+}
+else {
+    print ( y )
 }
 
-dfjkvnfd5454
 

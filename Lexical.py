@@ -60,7 +60,7 @@ class Lexical(object):
                 tokens.append([f"Token (Reservada) : {word}"])
             
             if(re.match("\W+",word) == None):
-                if(re.match(r"[a-z|A-Z]+[0-9]+",word) and word not in reservadas):
+                if(re.match(r"[a-z|A-Z]+[0-9]+|[a-z|A-Z]+",word) and word not in reservadas):
                     tokens.append([f"Token (Identificador) : {word}"])
             
             if(word in caractere):
