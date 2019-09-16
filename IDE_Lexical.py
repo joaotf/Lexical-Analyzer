@@ -68,7 +68,7 @@ class Notepad:
 
         self.__thisFileMenu.add_command(label="Salvar",
                                         command=self.__saveFile)
-
+        self.__thisFileMenu.add_separator()
         self.__thisFileMenu.add_command(label="Compilar",
                                        command=self.__compilar)
         self.__thisFileMenu.add_command(label="Tokens",

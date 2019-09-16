@@ -46,9 +46,7 @@ class Lexical(object):
 
 
     def token(self):
-        reservada = False
-        
-
+    
         tokens = []
 
         source_code = self.source_code.split()
@@ -60,12 +58,9 @@ class Lexical(object):
 
             if(word in reservadas):
                 tokens.append([f"Token (Reservada) : {word}"])
-                reservada = True
-            else:
-                reservada = False
             
             if(re.match("\W+",word) == None):
-                if((re.match(r'[a-z]', word) or re.match(r'[A-Z]',word)) and reservada == False):
+                if(re.match(r"[a-z|A-Z]+[0-9]+",word) and word not in reservadas):
                     tokens.append([f"Token (Identificador) : {word}"])
             
             if(word in caractere):
@@ -107,7 +102,7 @@ class Lexical(object):
             elif(re.match("\}",word)):
                 tokens.append([f"Token (Agrupadores) : {word}"])
 
-            elif(re.match(r'\uFFFF',word)):
+            elif(re.match(r"(\n)+",word)):
                 tokens.append([f"Token (Espaçador) : {word}"])
             
             elif("\#+" in word):

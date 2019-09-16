@@ -1,12 +1,9 @@
-'Token (Reservada) : if']
- ['Token (Agrupadores) : (']
- ['Token (Identificador) : x']
- ['Token (Atribuição) : =']
+'Token (Atribuição) : =']
  ['Token (Double) : 5.10']
  ['Token (Agrupadores) : )']
  ['Token (Agrupadores) : {']
  ['Token (Reservada) : print']
  ['Token (Agrupadores) : (']
- ['Token (Identificador) : x']
  ['Token (Agrupadores) : )']
- ['Token (Agrupadores) : }'
+ ['Token (Agrupadores) : }']
+ ['Token (Identificador) : dfjkvnfd5454'

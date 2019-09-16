@@ -10,5 +10,7 @@ def main(args):
     tokens = lex.token();
 
     return tokens
+
+    
 ide.doidao1()
 
