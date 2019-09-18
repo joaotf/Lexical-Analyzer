@@ -9,7 +9,7 @@ Token (Palavra Reservada) : int
  Token (Palavra Reservada) : if
  Token (Agrupadores) : (
  Token (Identificador) : x
- Token (Atribuição) : ==
+ Token (Atribuidor  Relacional) : ==
  Token (Inteiro) : 5
  Token (Agrupadores) : )
  Token (Agrupadores) : {

@@ -63,9 +63,9 @@ class Lexical(object):
             
             elif(re.match("\#",word)):
                 tokens.append([f"Token (Comentário) : {word}"])   
-
-            elif(re.match("(=)",word)):
-                tokens.append([f"Token (Atribuição) : {word}"])
+            if(word.count("=") == 1):
+                if(re.match("(=)",word)):
+                    tokens.append([f"Token (Atribuição) : {word}"])
             
             elif(re.match("\(",word)):
                 tokens.append([f"Token (Agrupadores) : {word}"])
@@ -85,7 +85,7 @@ class Lexical(object):
             elif(re.match("\<",word)):
                 tokens.append([f"Token (Operadores Relacionais) : {word}"])
                 
-            elif(re.match("(==)",word)):
+            elif(re.match("==",word)):
                 tokens.append([f"Token (Atribuidor  Relacional) : {word}"])
 
             elif(re.match("\{",word)):
