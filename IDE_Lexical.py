@@ -1,5 +1,6 @@
 import tkinter as tk
 from tkinter import *
+import re
 import os
 from tkinter.messagebox import *
 from tkinter.filedialog import *
@@ -124,23 +125,26 @@ class Notepad:
                                                  ("Text Documents", "*.txt")])
         y = os.path.basename(self.__file)
        
-        with open(y,'r+') as file:
+        with open(y,'r+', encoding="utf8") as file:
             content = file.read()
 
         x = Main.main(y)
+        
+        
+        content2 = str(x).replace(",","\n").replace("[","").replace("]","").replace("'","").replace('"',"").replace("\\","/").replace("//n","")
 
-        content2 = str(x).strip('[]').replace(",","\n").strip("[]")
 
-        with open("result.txt",'w+') as file1:
+        with open("result.txt",'w+', encoding="utf8") as file1:
             content = file1.writelines(content2)
         
         self.__root.title(y)
 
-        file = open("result.txt", "r+")
+        file = open("result.txt", "r+", encoding="utf8")
+        
         root = Tk();
         root.geometry('500x600')
         
-        text = Text(root)
+        text = Text(root,height=30,width=40)
 
         text.insert(INSERT,file.read())
         text.pack()
@@ -164,7 +168,7 @@ class Notepad:
             self.__root.title(os.path.basename(self.__file) + " - Notepad")
             self.__thisTextArea.delete(1.0, END)
 
-            file = open(self.__file, "r")
+            file = open(self.__file, "r", encoding="utf8")
 
             self.__thisTextArea.insert(1.0, file.read())
 
@@ -230,7 +234,7 @@ class Notepad:
                 self.__file = None
             else:
 
-                file = open(self.__file, "w")
+                file = open(self.__file, "w", encoding="utf8")
                 file.write(self.__thisTextArea.get(1.0, END))
                 file.close()
 

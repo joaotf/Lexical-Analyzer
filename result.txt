@@ -1,27 +1,39 @@
-'Token (Reservada) : int']
- ['Token (Identificador) : x']
- ['Token (Atribui��o) : =']
- ['Token (Inteiro) : 5']
- ['Token (Reservada) : double']
- ['Token (Identificador) : y']
- ['Token (Atribui��o) : =']
- ['Token (Double) : 10.40']
- ['Token (Reservada) : if']
- ['Token (Agrupadores) : (']
- ['Token (Identificador) : x']
- ['Token (Comparador) : <']
- ['Token (Identificador) : y']
- ['Token (Agrupadores) : )']
- ['Token (Agrupadores) : {']
- ['Token (Reservada) : print']
- ['Token (Agrupadores) : (']
- ['Token (Identificador) : x']
- ['Token (Agrupadores) : )']
- ['Token (Agrupadores) : }']
- ['Token (Reservada) : else']
- ['Token (Agrupadores) : {']
- ['Token (Reservada) : print']
- ['Token (Agrupadores) : (']
- ['Token (Identificador) : y']
- ['Token (Agrupadores) : )']
- ['Token (Agrupadores) : }'
+Token (Palavra Reservada) : int
+ Token (Identificador) : x
+ Token (Atribuição) : =
+ Token (Inteiro) : 5
+ Token (Palavra Reservada) : double
+ Token (Identificador) : y
+ Token (Atribuição) : =
+ Token (Double) : 10.4
+ Token (Palavra Reservada) : if
+ Token (Agrupadores) : (
+ Token (Identificador) : x
+ Token (Atribuição) : ==
+ Token (Inteiro) : 5
+ Token (Agrupadores) : )
+ Token (Agrupadores) : {
+ Token (Palavra Reservada) : print
+ Token (Agrupadores) : (
+ Token (Identificador) : x
+ Token (Agrupadores) : )
+ Token (Agrupadores) : }
+ Token não identificado : !
+ Token (Comentário) : #
+ Token não identificado : $
+ Token não identificado : %
+ Token (Palavra Reservada) : else
+ Token (Agrupadores) : {
+ Token (Palavra Reservada) : print
+ Token (Agrupadores) : (
+ Token (Identificador) : y
+ Token (Agrupadores) : )
+ Token (Agrupadores) : }
+ Token (Palavra Reservada) : print
+ Token (Agrupadores) : (
+ Token (Identificador) : x
+ Token (Agrupadores) : )
+ Token (Palavra Reservada) : print
+ Token (Agrupadores) : (
+ Token (Identificador) : y
+ Token (Agrupadores) : )
