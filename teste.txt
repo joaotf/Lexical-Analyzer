@@ -4,15 +4,3 @@ double y = 10.4
 if ( x == 5 ) {
     print ( x )
 }
-!
-@
-#
-$
-%
-else {
-    print ( y )
-}
-
-print ( x )
-print ( y )
-

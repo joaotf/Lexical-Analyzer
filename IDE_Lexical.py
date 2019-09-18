@@ -120,20 +120,22 @@ class Notepad:
     def __compilar(self):
         content = ""
         content2 = ""
+        linhao = 0
         self.__file = askopenfilename(defaultextension=".txt",
                                       filetypes=[("All Files", "*.*"),
                                                  ("Text Documents", "*.txt")])
         y = os.path.basename(self.__file)
        
         with open(y,'r+', encoding="utf8") as file:
-            content = file.read()
-
+            for linha in file:
+                linhao += 1
+            content = file.readlines()
+        
         x = Main.main(y)
         
         
-        content2 = str(x).replace(",","\n").replace("[","").replace("]","").replace("'","").replace('"',"").replace("\\","/").replace("//n","")
-
-
+        content2 = str(x).replace(",","\n").replace("[","").replace("]","").replace("'","").replace('"',"").replace("\\","/")
+    
         with open("result.txt",'w+', encoding="utf8") as file1:
             content = file1.writelines(content2)
         

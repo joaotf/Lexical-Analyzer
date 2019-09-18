@@ -44,9 +44,11 @@ class Lexical(object):
 
         while (source_index < len(source_code)):
             word = source_code[source_index]
+            
 
-            if(word in reservadas):
-                tokens.append([f"Token (Palavra Reservada) : {word}"])
+            for i in reservadas:
+                if(re.match(f"({i})+",word)):
+                    tokens.append([f"Token (Palavra Reservada) : {word}"])
             
             if(re.match("\W+",word) == None):
                 if(re.match(r"[a-z|A-Z]+[0-9]+|[a-z|A-Z]+",word) and word not in reservadas):
@@ -63,8 +65,8 @@ class Lexical(object):
             
             elif(re.match("\#",word)):
                 tokens.append([f"Token (Comentário) : {word}"])   
-            if(word.count("=") == 1):
-                if(re.match("(=)",word)):
+            if(re.match("(=)",word)):
+                if(word.count("=") == 1):
                     tokens.append([f"Token (Atribuição) : {word}"])
             
             elif(re.match("\(",word)):
@@ -85,8 +87,9 @@ class Lexical(object):
             elif(re.match("\<",word)):
                 tokens.append([f"Token (Operadores Relacionais) : {word}"])
                 
-            elif(re.match("==",word)):
-                tokens.append([f"Token (Atribuidor  Relacional) : {word}"])
+            if(re.match("==",word)):
+                if(word.count("=") == 2):
+                    tokens.append([f"Token (Atribuidor  Relacional) : {word}"])
 
             elif(re.match("\{",word)):
                 tokens.append([f"Token (Agrupadores) : {word}"])
@@ -94,7 +97,7 @@ class Lexical(object):
             elif(re.match("\}",word)):
                 tokens.append([f"Token (Agrupadores) : {word}"])
 
-            elif(re.match(r"[\s]+[\n]+",word)):
+            elif(re.search(r"(\n)+",word)):
                 tokens.append([f"Token (Espaçador) : {word}"])
             
                

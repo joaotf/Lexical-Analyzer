@@ -4,9 +4,9 @@ import IDE_Lexical as ide
 def main(args):
     content = ""
     with open(f"{args}",'r+') as file:
-        content = file.read()
-    
-    lex = Lexical.Lexical(content)
+        content = file.readlines() 
+    lex = Lexical.Lexical(str(content).replace("[","").replace("]","").replace("'","").replace("\\","/").replace("/n",""))
+  
     tokens = lex.token();
 
     return tokens
