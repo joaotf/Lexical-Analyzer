@@ -137,8 +137,9 @@ class Notepad:
         content2 = str(x).replace(",","\n").replace("[","").replace("]","").replace("'","").replace('"',"").replace("\\","/")
     
         with open("result.txt",'w+', encoding="utf8") as file1:
+            file1.writelines(" ")
             content = file1.writelines(content2)
-        
+
         self.__root.title(y)
 
         file = open("result.txt", "r+", encoding="utf8")

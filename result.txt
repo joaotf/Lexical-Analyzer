@@ -1,13 +1,22 @@
-Token (Palavra Reservada) : int
- Token (Identificador) : x
- Token (Atribuição) : =
- Token (Inteiro) : 5
-
- Token (Palavra Reservada) : double
  Token (Palavra Reservada) : double
  Token (Identificador) : y
  Token (Atribuição) : =
  Token (Double) : 10.4
+
+ Token (Palavra Reservada) : double
+ Token (Identificador) : a
+ Token (Atribuição) : =
+ Token (Double) : 30.2050
+
+ Token (Palavra Reservada) : int
+ Token (Identificador) : x
+ Token (Atribuição) : =
+ Token (Inteiro) : 5
+
+ Token (Palavra Reservada) : int
+ Token (Identificador) : a
+ Token (Atribuição) : =
+ Token (Inteiro) : 10
 
  Token (Palavra Reservada) : if
  Token (Agrupadores) : (
